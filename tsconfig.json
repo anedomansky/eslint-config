@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "declaration": true,
+        "moduleResolution": "NodeNext",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "isolatedDeclarations": true,
+        "module": "NodeNext",
+        "incremental": true,
+        "composite": true,
+        "target": "ESNext",
+        "rootDir": "./src"
+    },
+    "include": [
+        "./src/**/*.ts"
+    ],
+}
