@@ -9,43 +9,43 @@ import unitJestConfig from './unit.jest.js';
 import unitTestingLibraryConfig from './unit.testing-library.js';
 
 type ANESLintConfigs = {
-    htmlAngular: TSESLint.FlatConfig.ConfigArray;
-    ts: TSESLint.FlatConfig.ConfigArray;
-    ui: TSESLint.FlatConfig.ConfigArray;
-    unitTestingLibrary: TSESLint.FlatConfig.ConfigArray;
-    unitJest: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESlint configuration for HTML files.
+   */
+  htmlAngular: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for TS files.
+   */
+  ts: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for UI tests.
+   */
+  ui: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for unit tests that use the `@testing-library/*`.
+   */
+  unitTestingLibrary: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for unit tests written with `Jest`.
+   */
+  unitJest: TSESLint.FlatConfig.ConfigArray;
 };
 
 export type ANESLintConfig = {
-    configs: ANESLintConfigs;
+  configs: ANESLintConfigs;
 };
 
 /**
  * All available ESLint configurations.
  */
 const configs: ANESLintConfigs = {
-    /**
-     * The ESlint configuration for HTML files.
-     */
-    htmlAngular: htmlAngularConfig(templatePlugin, templateParser),
-    /**
-     * The ESLint configuration for TS files.
-     */
-    ts: tsConfig(plugin, parser),
-    /**
-     * The ESLint configuration for UI tests.
-     */
-    ui: uiConfig(plugin, parser),
-    /**
-     * The ESLint configuration for unit tests that use the `@testing-library/*`.
-     */
-    unitTestingLibrary: unitTestingLibraryConfig(plugin, parser),
-    /**
-     * The ESLint configuration for unit tests written with `Jest`.
-     */
-    unitJest: unitJestConfig(plugin, parser),
+  htmlAngular: htmlAngularConfig(templatePlugin, templateParser),
+  ts: tsConfig(plugin, parser),
+  ui: uiConfig(plugin, parser),
+  unitTestingLibrary: unitTestingLibraryConfig(plugin, parser),
+  unitJest: unitJestConfig(plugin, parser),
 };
 
 export const an: ANESLintConfig = {
-    configs,
+  configs,
 };

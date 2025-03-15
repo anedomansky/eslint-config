@@ -16,22 +16,22 @@ import baseConfig from './base.js';
  * @returns An array of ESLint configurations.
  */
 export default (
-    plugin: TSESLint.FlatConfig.Plugin,
-    parser: TSESLint.FlatConfig.Parser,
+  plugin: TSESLint.FlatConfig.Plugin,
+  parser: TSESLint.FlatConfig.Parser,
 ): TSESLint.FlatConfig.ConfigArray => [
-        baseConfig(plugin, parser),
-        {
-            name: '@anedomansky/eslint-config/unit/testing-library',
-            ignores: ['**/*.e2e.spec.ts'],
-            ...testingLibrary.configs['flat/angular'],
-            ...testingLibrary.configs['flat/dom'],
-            ...testingLibrary.configs['flat/marko'],
-            ...testingLibrary.configs['flat/react'],
-            ...testingLibrary.configs['flat/svelte'],
-            ...testingLibrary.configs['flat/vue'],
-            rules: {
-                'testing-library/no-node-access': 'warn',
-                'testing-library/no-render-in-lifecycle': 'off',
-            },
-        },
-    ];
+  baseConfig(plugin, parser),
+  {
+    name: '@anedomansky/eslint-config/unit/testing-library',
+    ignores: ['**/*.e2e.spec.ts', '**/*.e2e.test.ts'],
+    ...testingLibrary.configs['flat/angular'],
+    ...testingLibrary.configs['flat/dom'],
+    ...testingLibrary.configs['flat/marko'],
+    ...testingLibrary.configs['flat/react'],
+    ...testingLibrary.configs['flat/svelte'],
+    ...testingLibrary.configs['flat/vue'],
+    rules: {
+      'testing-library/no-node-access': 'warn',
+      'testing-library/no-render-in-lifecycle': 'off',
+    },
+  },
+];

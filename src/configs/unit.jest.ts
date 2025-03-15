@@ -16,27 +16,27 @@ import baseConfig from './base.js';
  * @returns An array of ESLint configurations tailored for unit testing with Jest.
  */
 export default (
-    plugin: TSESLint.FlatConfig.Plugin,
-    parser: TSESLint.FlatConfig.Parser,
+  plugin: TSESLint.FlatConfig.Plugin,
+  parser: TSESLint.FlatConfig.Parser,
 ): TSESLint.FlatConfig.ConfigArray => [
-        baseConfig(plugin, parser),
+  baseConfig(plugin, parser),
+  {
+    name: '@anedomansky/eslint-config/unit/jest',
+    ignores: ['**/*.e2e.spec.ts', '**/*.e2e.test.ts'],
+    ...jest.configs['flat/recommended'],
+    rules: {
+      ...jest.configs['flat/recommended'].rules,
+      'jest/expect-expect': [
+        'error',
         {
-            name: '@anedomansky/eslint-config/unit/jest',
-            ignores: ['**/*.e2e.spec.ts'],
-            ...jest.configs['flat/recommended'],
-            rules: {
-                ...jest.configs['flat/recommended'].rules,
-                'jest/expect-expect': [
-                    'error',
-                    {
-                        additionalTestBlockFunctions: [],
-                        assertFunctionNames: [
-                            'expect',
-                            'screen.findAllBy*',
-                            'screen.findBy*',
-                        ],
-                    },
-                ],
-            },
+          additionalTestBlockFunctions: [],
+          assertFunctionNames: [
+            'expect',
+            'screen.findAllBy*',
+            'screen.findBy*',
+          ],
         },
-    ];
+      ],
+    },
+  },
+];

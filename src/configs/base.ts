@@ -8,15 +8,15 @@ import type { TSESLint } from '@typescript-eslint/utils';
  * @returns The base ESLint configuration.
  */
 export default (
-    plugin: TSESLint.FlatConfig.Plugin,
-    parser: TSESLint.FlatConfig.Parser,
+  plugin: TSESLint.FlatConfig.Plugin,
+  parser: TSESLint.FlatConfig.Parser,
 ): TSESLint.FlatConfig.Config => ({
-    name: '@anedomansky/eslint-config/base',
-    languageOptions: {
-        parser,
-        sourceType: 'module',
-    },
-    plugins: {
-        '@anedomansky/eslint-config': plugin,
-    },
+  name: '@anedomansky/eslint-config/base',
+  languageOptions: {
+    parser,
+    sourceType: 'module',
+  },
+  plugins: {
+    '@anedomansky/eslint-config': plugin,
+  },
 });

@@ -10,21 +10,19 @@ import baseConfig from './base.js';
  * @returns The UI-Testing ESLint configuration.
  */
 export default (
-    plugin: TSESLint.FlatConfig.Plugin,
-    parser: TSESLint.FlatConfig.Parser,
+  plugin: TSESLint.FlatConfig.Plugin,
+  parser: TSESLint.FlatConfig.Parser,
 ): TSESLint.FlatConfig.ConfigArray => [
-        baseConfig(plugin, parser),
+  baseConfig(plugin, parser),
+  {
+    name: '@anedomansky/eslint-config/ui',
+    rules: {
+      'playwright/expect-expect': [
+        'error',
         {
-            name: '@anedomansky/eslint-config/ui',
-            rules: {
-                'playwright/expect-expect': [
-                    'error',
-                    {
-                        assertFunctionNames: [
-                            'expect',
-                        ],
-                    },
-                ],
-            },
+          assertFunctionNames: ['expect'],
         },
-    ];
+      ],
+    },
+  },
+];

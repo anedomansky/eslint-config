@@ -16,37 +16,37 @@ import baseConfig from './base.js';
  * @returns The HTML ESLint configuration.
  */
 export default (
-    plugin: TSESLint.FlatConfig.Plugin,
-    parser: TSESLint.FlatConfig.Parser,
+  plugin: TSESLint.FlatConfig.Plugin,
+  parser: TSESLint.FlatConfig.Parser,
 ): TSESLint.FlatConfig.ConfigArray => [
-        baseConfig(plugin, parser),
+  baseConfig(plugin, parser),
+  {
+    name: '@anedomansky/eslint-config/html',
+    rules: {
+      '@angular-eslint/template/alt-text': 'warn',
+      '@angular-eslint/template/click-events-have-key-events': 'warn',
+      '@angular-eslint/template/elements-content': 'warn',
+      '@angular-eslint/template/interactive-supports-focus': 'warn',
+      '@angular-eslint/template/label-has-associated-control': 'warn',
+      '@angular-eslint/template/mouse-events-have-key-events': 'warn',
+      '@angular-eslint/template/no-autofocus': 'warn',
+      '@angular-eslint/template/no-distracting-elements': 'warn',
+      '@angular-eslint/template/no-positive-tabindex': 'warn',
+      '@angular-eslint/template/prefer-control-flow': 'warn',
+      '@angular-eslint/template/table-scope': 'warn',
+      '@angular-eslint/template/valid-aria': 'warn',
+      'prettier/prettier': [
+        'error',
         {
-            name: '@anedomansky/eslint-config/html',
-            rules: {
-                '@angular-eslint/template/alt-text': 'warn',
-                '@angular-eslint/template/click-events-have-key-events': 'warn',
-                '@angular-eslint/template/elements-content': 'warn',
-                '@angular-eslint/template/interactive-supports-focus': 'warn',
-                '@angular-eslint/template/label-has-associated-control': 'warn',
-                '@angular-eslint/template/mouse-events-have-key-events': 'warn',
-                '@angular-eslint/template/no-autofocus': 'warn',
-                '@angular-eslint/template/no-distracting-elements': 'warn',
-                '@angular-eslint/template/no-positive-tabindex': 'warn',
-                '@angular-eslint/template/prefer-control-flow': 'warn',
-                '@angular-eslint/template/table-scope': 'warn',
-                '@angular-eslint/template/valid-aria': 'warn',
-                'prettier/prettier': [
-                    'error',
-                    {
-                        singleQuote: false,
-                        useTabs: false,
-                        tabWidth: 2,
-                        semi: true,
-                        bracketSpacing: true,
-                        endOfLine: 'auto',
-                        parser: 'angular',
-                    },
-                ],
-            },
+          singleQuote: false,
+          useTabs: false,
+          tabWidth: 2,
+          semi: true,
+          bracketSpacing: true,
+          endOfLine: 'auto',
+          parser: 'angular',
         },
-    ];
+      ],
+    },
+  },
+];
