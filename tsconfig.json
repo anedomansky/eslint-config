@@ -7,8 +7,6 @@
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "sourceMap": true,
-        "downlevelIteration": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
