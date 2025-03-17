@@ -29,7 +29,8 @@
     "typescript-eslint",
     "typescript",
     "prettier",
-    "formatter"
+    "formatter",
+    "code style"
   ],
   "author": "",
   "license": "MIT",
