@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
-import baseConfig from './base.js';
+import baseConfig from './template-base.js';
 
 /**
  * Generates an ESLint configuration for HTML templates.
@@ -21,7 +21,7 @@ export default (
 ): TSESLint.FlatConfig.ConfigArray => [
   baseConfig(plugin, parser),
   {
-    name: '@anedomansky/eslint-config/html',
+    name: '@anedomansky/eslint-config/html-angular',
     rules: {
       '@angular-eslint/template/alt-text': 'warn',
       '@angular-eslint/template/click-events-have-key-events': 'warn',

@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
-import baseConfig from './base.js';
+import baseConfig from './template-base.js';
 
 /**
  * Generates an ESLint configuration for the UI project.

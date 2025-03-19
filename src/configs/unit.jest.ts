@@ -1,7 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 import jest from 'eslint-plugin-jest';
 
-import baseConfig from './base.js';
+import baseConfig from './template-base.js';
 
 /**
  * Generates a Jest-specific ESLint configuration for unit tests.

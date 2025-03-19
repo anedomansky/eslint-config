@@ -1,7 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 import testingLibrary from 'eslint-plugin-testing-library';
 
-import baseConfig from './base.js';
+import baseConfig from './template-base.js';
 
 /**
  * Generates a Testing Library-specific ESLint configuration for unit tests.
