@@ -2,6 +2,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
+    "eslint.format.enable": true,
     "eslint.rules.customizations": [
         {
             "rule": "prettier/prettier",
@@ -36,5 +37,11 @@
         "scss",
         "pcss",
         "postcss"
-    ]
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
 }
