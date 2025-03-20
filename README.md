@@ -7,7 +7,7 @@ ESLint configuration that helps to write quality code.
 ## Features
 
 - Opinionated but highly customizable
-- Designed to work with Typescript, JavaScript, HTML, Jest, @testing-library/*, Angular, SCSS and CSS
+- Designed to work with Typescript, Jest, [@testing-library/*](https://testing-library.com), Angular (HTML + TS)
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files)
 - Sensible defaults
 - Rules are easily customized
@@ -109,7 +109,14 @@ Add the following settings to your `.vscode/settings.json`:
         "scss",
         "pcss",
         "postcss"
-    ]
+    ],
+    // Enable ESLint as default formatter for specific file types
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
 }
 ```
 </details>
@@ -118,19 +125,48 @@ Add the following settings to your `.vscode/settings.json`:
 
 There are multiple preconfigured configuration packs that you can use:
 
-- `anStandardTS`: 
-- `anStandardAngular`:
+<details>
+<summary>anStandardTS</summary>
+<br />
 
-Aside from that you can build your own configuration with the following configurations:
+Includes configs and rules for the following file types:
 
-|Name|Description|
-|------|-------------|
-|`an.configs.ts`||
-|`an.configs.html`||
-|`an.configs.unit`||
-|`an.configs.unitTestingLibrary`||
-|`an.configs.ui`||
+- `**/*.ts`: Config and rules specific to TypeScript (including formatter rules)
+- `**/.spec.ts`|`**/*.test.ts`: Config and rules specific to Jest and @testing-library/*
+- `**/*.e2e.spec.ts`|`**/*.e2e.test.ts`: Config and rules specific to Playwright
 
-TODO:
-- write README
-- Add prettier configs for html, css, scss, js, json formatting
+</details>
+
+<details>
+<summary>anStandardAngular</summary>
+<br />
+
+Includes configs and rules for the following file types:
+
+- `**/*.ts`: Config and rules specific to TypeScript (including formatter rules and Angular specific rules)
+- `**/.spec.ts`|`**/*.test.ts`: Config and rules specific to Jest and @testing-library/*
+- `**/*.e2e.spec.ts`|`**/*.e2e.test.ts`: Config and rules specific to Playwright
+- `**/*.html`: Config and rules specific to Angular template files (including formatter rules)
+
+</details>
+<br />
+
+Aside from that you can [compose your own configuration](https://typescript-eslint.io/getting-started) with the following configurations:
+
+|Name|Description|Formatter
+|------|------|------|
+|`an.configs.ts`|Relevant config and rules for TS files|Prettier|
+|`an.configs.html`| Relevant config and rules for HTML files|Prettier|
+|`an.configs.htmlAngular`|Relevant config and rules for Angular templates|Prettier|
+|`an.configs.unit`|Relevant config and rules for Jest test files|---|
+|`an.configs.unitTestingLibrary`|Relevant config and rules for test files that use @testing-library/*|---|
+|`an.configs.ui`|Relevant config and rules for Playwright test files|---|
+
+## Roadmap
+
+Configurations/Formatters for:
+- JavaScript
+- SCSS
+- CSS
+- HTML 
+- JSON(C)
