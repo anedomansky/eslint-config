@@ -1,7 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import { templateParser, templatePlugin } from 'angular-eslint';
+import { templateParser } from 'angular-eslint';
 import { parser, plugin } from 'typescript-eslint';
 
+import { anTemplatePlugin } from '../plugins/index.js';
 import htmlAngularConfig from './html-angular.js';
 import tsConfig from './ts.js';
 import uiConfig from './ui.js';
@@ -39,7 +40,7 @@ export type ANESLintConfig = {
  * All available ESLint configurations.
  */
 const configs: ANESLintConfigs = {
-  htmlAngular: htmlAngularConfig(templatePlugin, templateParser),
+  htmlAngular: htmlAngularConfig(anTemplatePlugin, templateParser),
   ts: tsConfig(plugin, parser),
   ui: uiConfig(plugin, parser),
   unitTestingLibrary: unitTestingLibraryConfig(plugin, parser),
