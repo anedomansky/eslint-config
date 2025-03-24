@@ -4,8 +4,9 @@
   "description": "Opinionated ESLint configuration for quality code",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
