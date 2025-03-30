@@ -51,6 +51,8 @@
   },
   "dependencies": {
     "@eslint/js": "9.22.0",
+    "@html-eslint/eslint-plugin": "0.37.0",
+    "@html-eslint/parser": "0.37.0",
     "@ngrx/eslint-plugin": "19.0.1",
     "@typescript-eslint/eslint-plugin": "8.26.1",
     "@typescript-eslint/parser": "8.26.1",
