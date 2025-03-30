@@ -34,6 +34,7 @@ export default (
     ...htmlEslint.configs['flat/recommended'],
     rules: {
       ...htmlEslint.configs['flat/recommended'].rules,
+      '@html-eslint/indent': ['error', 2],
       'prettier/prettier': [
         'error',
         {
