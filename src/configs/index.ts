@@ -1,8 +1,10 @@
+import htmlParser from '@html-eslint/parser';
 import type { TSESLint } from '@typescript-eslint/utils';
 import { templateParser } from 'angular-eslint';
 import { parser, plugin } from 'typescript-eslint';
 
 import { anTemplatePlugin } from '../plugins/index.js';
+import htmlConfig from './html.js';
 import htmlAngularConfig from './html-angular.js';
 import tsConfig from './ts.js';
 import uiConfig from './ui.js';
@@ -11,7 +13,11 @@ import unitTestingLibraryConfig from './unit.testing-library.js';
 
 type ANESLintConfigs = {
   /**
-   * The ESlint configuration for HTML files.
+   * The ESLint configuration for HTML files.
+   */
+  html: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for Angular-HTML files.
    */
   htmlAngular: TSESLint.FlatConfig.ConfigArray;
   /**
@@ -40,6 +46,7 @@ export type ANESLintConfig = {
  * All available ESLint configurations.
  */
 const configs: ANESLintConfigs = {
+  html: htmlConfig(plugin, htmlParser),
   htmlAngular: htmlAngularConfig(anTemplatePlugin, templateParser),
   ts: tsConfig(plugin, parser),
   ui: uiConfig(plugin, parser),

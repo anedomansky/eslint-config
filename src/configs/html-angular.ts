@@ -3,7 +3,7 @@ import type { TSESLint } from '@typescript-eslint/utils';
 import baseConfig from './template-base.js';
 
 /**
- * Generates an ESLint configuration for HTML templates.
+ * Generates an ESLint configuration for Angular-HTML templates.
  *
  * The configuration includes:
  * - Base configuration from `baseConfig`.

@@ -24,7 +24,7 @@ const playwrightPlugin: PlaywrightPlugin =
   playwright as unknown as PlaywrightPlugin;
 
 /**
- * This is the Typescript ESlint configuration that includes all recommended rules and plugins.
+ * This is the Typescript ESLint configuration that includes all recommended rules and plugins.
  */
 export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   {
