@@ -35,6 +35,11 @@ export default (
     rules: {
       ...htmlEslint.configs['flat/recommended'].rules,
       '@html-eslint/indent': ['error', 2],
+      '@html-eslint/no-extra-spacing-attrs': [
+        'error',
+        { enforceBeforeSelfClose: true },
+      ],
+      '@html-eslint/require-closing-tags': ['error', { selfClosing: 'always' }],
       'prettier/prettier': [
         'error',
         {
