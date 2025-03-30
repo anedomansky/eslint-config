@@ -149,18 +149,28 @@ Includes configs and rules for the following file types:
 - `**/*.html`: Config and rules specific to Angular template files (including formatter rules)
 
 </details>
+
+<details>
+<summary>anStandardHTML (since v1.1.0)</summary>
+<br />
+
+Includes configs and rules for the following file types:
+
+- `**/*.html`: Config and rules specific to HTML (including formatter rules)
+
+</details>
 <br />
 
 Aside from that you can [compose your own configuration](https://typescript-eslint.io/getting-started) with the following configurations:
 
-|Name|Description|Formatter
-|------|------|------|
-|`an.configs.ts`|Relevant config and rules for TS files|Prettier|
-|`an.configs.html`| Relevant config and rules for HTML files|Prettier|
-|`an.configs.htmlAngular`|Relevant config and rules for Angular templates|Prettier|
-|`an.configs.unit`|Relevant config and rules for Jest test files|---|
-|`an.configs.unitTestingLibrary`|Relevant config and rules for test files that use @testing-library/*|---|
-|`an.configs.ui`|Relevant config and rules for Playwright test files|---|
+|Name|Description|Formatter|Since
+|------|------|------|------|
+|`an.configs.ts`|Relevant config and rules for TS files|Prettier|1.0.0|
+|`an.configs.html`| Relevant config and rules for HTML files|Prettier|1.1.0|
+|`an.configs.htmlAngular`|Relevant config and rules for Angular templates|Prettier|1.0.0|
+|`an.configs.unit`|Relevant config and rules for Jest test files|---|1.0.0|
+|`an.configs.unitTestingLibrary`|Relevant config and rules for test files that use @testing-library/*|---|1.0.0|
+|`an.configs.ui`|Relevant config and rules for Playwright test files|---|1.0.0|
 
 ## Roadmap
 
@@ -168,5 +178,4 @@ Configurations/Formatters for:
 - JavaScript
 - SCSS
 - CSS
-- HTML 
 - JSON(C)
