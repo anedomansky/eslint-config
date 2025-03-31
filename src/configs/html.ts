@@ -34,6 +34,7 @@ export default (
     ...htmlEslint.configs['flat/recommended'],
     rules: {
       ...htmlEslint.configs['flat/recommended'].rules,
+      '@html-eslint/attrs-newline': ['error', { ifAttrsMoreThan: 3 }],
       '@html-eslint/indent': ['error', 2],
       '@html-eslint/no-extra-spacing-attrs': [
         'error',
