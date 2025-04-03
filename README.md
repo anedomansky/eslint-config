@@ -116,6 +116,15 @@ Add the following settings to your `.vscode/settings.json`:
     },
     "[html]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json5]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     }
 }
 ```
@@ -159,6 +168,18 @@ Includes configs and rules for the following file types:
 - `**/*.html`: Config and rules specific to HTML (including formatter rules)
 
 </details>
+
+<details>
+<summary>anStandardJSON (since v1.2.0)</summary>
+<br />
+
+Includes configs and rules for the following file types:
+
+- `**/*.json`: Config and rules specific to JSON (including formatter rules)
+- `**/*.jsonc`: Config and rules specific to JSONC (including formatter rules)
+- `**/*.json5`: Config and rules specific to JSON5 (including formatter rules)
+
+</details>
 <br />
 
 Aside from that you can [compose your own configuration](https://typescript-eslint.io/getting-started) with the following configurations:
@@ -168,6 +189,9 @@ Aside from that you can [compose your own configuration](https://typescript-esli
 |`an.configs.ts`|Relevant config and rules for TS files|Prettier|1.0.0|
 |`an.configs.html`| Relevant config and rules for HTML files|Prettier|1.1.0|
 |`an.configs.htmlAngular`|Relevant config and rules for Angular templates|Prettier|1.0.0|
+|`an.configs.json`|Relevant config and rules for JSON files|Prettier|1.2.0|
+|`an.configs.jsonc`|Relevant config and rules for JSONC files|Prettier|1.2.0|
+|`an.configs.json5`|Relevant config and rules for JSON5 filestemplates|Prettier|1.2.0|
 |`an.configs.unit`|Relevant config and rules for Jest test files|---|1.0.0|
 |`an.configs.unitTestingLibrary`|Relevant config and rules for test files that use @testing-library/*|---|1.0.0|
 |`an.configs.ui`|Relevant config and rules for Playwright test files|---|1.0.0|
@@ -178,4 +202,4 @@ Configurations/Formatters for:
 - JavaScript
 - SCSS
 - CSS
-- JSON(C)
+- Markdown

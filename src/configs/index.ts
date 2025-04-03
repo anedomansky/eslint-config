@@ -6,6 +6,8 @@ import { parser, plugin } from 'typescript-eslint';
 import { anTemplatePlugin } from '../plugins/index.js';
 import htmlConfig from './html.js';
 import htmlAngularConfig from './html-angular.js';
+import jsonConfig from './json.js';
+import json5Config from './json5.js';
 import tsConfig from './ts.js';
 import uiConfig from './ui.js';
 import unitJestConfig from './unit.jest.js';
@@ -20,6 +22,18 @@ type ANESLintConfigs = {
    * The ESLint configuration for Angular-HTML files.
    */
   htmlAngular: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for JSON files.
+   */
+  json: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for JSONC files.
+   */
+  jsonc: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for JSON5 files.
+   */
+  json5: TSESLint.FlatConfig.ConfigArray;
   /**
    * The ESLint configuration for TS files.
    */
@@ -48,6 +62,9 @@ export type ANESLintConfig = {
 const configs: ANESLintConfigs = {
   html: htmlConfig(plugin, htmlParser),
   htmlAngular: htmlAngularConfig(anTemplatePlugin, templateParser),
+  json: jsonConfig(plugin, parser),
+  jsonc: jsonConfig(plugin, parser),
+  json5: json5Config(plugin, parser),
   ts: tsConfig(plugin, parser),
   ui: uiConfig(plugin, parser),
   unitTestingLibrary: unitTestingLibraryConfig(plugin, parser),

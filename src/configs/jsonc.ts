@@ -1,18 +1,10 @@
-import html from '@html-eslint/eslint-plugin';
+import json from '@eslint/json';
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import baseConfig from './template-base.js';
 
-type HTMLESLint = {
-  configs: {
-    'flat/recommended': TSESLint.FlatConfig.Config;
-  };
-};
-
-const htmlEslint = html as unknown as HTMLESLint;
-
 /**
- * Generates an ESLint configuration for HTML files.
+ * Generates an ESLint configuration for JSONC files.
  *
  * The configuration includes:
  * - Base configuration from `baseConfig`.
@@ -30,17 +22,10 @@ export default (
 ): TSESLint.FlatConfig.ConfigArray => [
   baseConfig(plugin, parser),
   {
-    name: '@anedomansky/eslint-config/html',
-    ...htmlEslint.configs['flat/recommended'],
+    name: '@anedomansky/eslint-config/jsonc',
+    language: 'json/jsonc',
+    ...json.configs.recommended,
     rules: {
-      ...htmlEslint.configs['flat/recommended'].rules,
-      '@html-eslint/attrs-newline': ['error', { ifAttrsMoreThan: 3 }],
-      '@html-eslint/indent': ['error', 2],
-      '@html-eslint/no-extra-spacing-attrs': [
-        'error',
-        { enforceBeforeSelfClose: true },
-      ],
-      '@html-eslint/require-closing-tags': ['error', { selfClosing: 'always' }],
       'prettier/prettier': [
         'error',
         {
@@ -50,7 +35,7 @@ export default (
           semi: true,
           bracketSpacing: true,
           endOfLine: 'auto',
-          parser: 'html',
+          parser: 'jsonc',
         },
       ],
     },
