@@ -21,6 +21,7 @@ export const anStandardJSON: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   },
   {
     files: ['**/*.json'],
+    ignores: ['package-lock.json'],
     extends: [...an.configs.json, prettierRecommended],
   },
   {
