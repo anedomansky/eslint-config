@@ -15,7 +15,8 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "tsc --build --clean",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "eslint:config": "eslint --print-config ./test/test.html"
   },
   "files": [
     "dist"
@@ -33,7 +34,7 @@
     "formatter",
     "code style"
   ],
-  "author": "",
+  "author": "Alexander Nedomansky <anedomansky@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/anedomansky/eslint-config/issues"
@@ -45,27 +46,27 @@
     "typescript-eslint": "^8.0.0"
   },
   "devDependencies": {
-    "eslint": "9.22.0",
-    "typescript": "5.8.2",
-    "typescript-eslint": "8.26.1"
+    "eslint": "9.26.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.31.1"
   },
   "dependencies": {
-    "@eslint/js": "9.22.0",
-    "@eslint/json": "0.11.0",
-    "@html-eslint/eslint-plugin": "0.37.0",
-    "@html-eslint/parser": "0.37.0",
-    "@ngrx/eslint-plugin": "19.0.1",
-    "@typescript-eslint/eslint-plugin": "8.26.1",
-    "@typescript-eslint/parser": "8.26.1",
-    "@typescript-eslint/utils": "8.26.1",
-    "angular-eslint": "19.2.1",
-    "eslint-config-prettier": "10.1.1",
-    "eslint-import-resolver-typescript": "3.8.7",
+    "@eslint/js": "9.26.0",
+    "@eslint/json": "0.12.0",
+    "@html-eslint/eslint-plugin": "0.39.0",
+    "@html-eslint/parser": "0.39.0",
+    "@ngrx/eslint-plugin": "19.1.0",
+    "@typescript-eslint/eslint-plugin": "8.31.1",
+    "@typescript-eslint/parser": "8.31.1",
+    "@typescript-eslint/utils": "8.31.1",
+    "angular-eslint": "19.3.0",
+    "eslint-config-prettier": "10.1.2",
+    "eslint-import-resolver-typescript": "4.3.4",
     "eslint-plugin-compat": "6.0.2",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.11.0",
     "eslint-plugin-playwright": "2.2.0",
-    "eslint-plugin-prettier": "5.2.3",
+    "eslint-plugin-prettier": "5.2.6",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-testing-library": "7.1.1",
     "eslint-plugin-unused-imports": "4.1.4",
