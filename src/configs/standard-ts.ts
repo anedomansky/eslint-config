@@ -39,7 +39,6 @@ export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
       '**/*.d.ts',
       '**/*.js',
       '**/*.mjs',
-      '**/*.json',
     ],
   },
   {

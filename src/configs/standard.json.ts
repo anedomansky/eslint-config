@@ -20,16 +20,31 @@ export const anStandardJSON: TSESLint.FlatConfig.ConfigArray = tseslint.config(
     ],
   },
   {
-    files: ['**/*.json'],
+    ...prettierRecommended,
+    name: '@anedomansky/eslint-config/prettier/json',
+    files: [
+      '**/*.json',
+      '**/*.jsonc',
+      '.vscode/*.json',
+      '**/*.code-workspace',
+      '**/*.json5',
+    ],
     ignores: ['package-lock.json'],
-    extends: [...an.configs.json, prettierRecommended],
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: false,
+          useTabs: false,
+          tabWidth: 2,
+          bracketSpacing: true,
+          endOfLine: 'auto',
+          parser: 'json',
+        },
+      ],
+    },
   },
-  {
-    files: ['**/*.jsonc', '.vscode/*.json', '**/*.code-workspace'],
-    extends: [...an.configs.jsonc, prettierRecommended],
-  },
-  {
-    files: ['**/*.json5'],
-    extends: [...an.configs.json5, prettierRecommended],
-  },
+  ...an.configs.json,
+  ...an.configs.jsonc,
+  ...an.configs.json5,
 );

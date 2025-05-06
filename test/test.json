@@ -1,6 +1,5 @@
 {
-    "a": "",
-    "a": {
-        "": ""
-    }
+    "abc": true,
+    "abc": false,
+    "": false
 }

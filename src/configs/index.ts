@@ -8,6 +8,7 @@ import htmlConfig from './html.js';
 import htmlAngularConfig from './html-angular.js';
 import jsonConfig from './json.js';
 import json5Config from './json5.js';
+import jsoncConfig from './jsonc.js';
 import tsConfig from './ts.js';
 import uiConfig from './ui.js';
 import unitJestConfig from './unit.jest.js';
@@ -62,9 +63,9 @@ export type ANESLintConfig = {
 const configs: ANESLintConfigs = {
   html: htmlConfig(plugin, htmlParser),
   htmlAngular: htmlAngularConfig(anTemplatePlugin, templateParser),
-  json: jsonConfig(plugin, parser),
-  jsonc: jsonConfig(plugin, parser),
-  json5: json5Config(plugin, parser),
+  json: jsonConfig(),
+  jsonc: jsoncConfig(),
+  json5: json5Config(),
   ts: tsConfig(plugin, parser),
   ui: uiConfig(plugin, parser),
   unitTestingLibrary: unitTestingLibraryConfig(plugin, parser),
