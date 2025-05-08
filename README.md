@@ -175,9 +175,9 @@ Includes configs and rules for the following file types:
 
 Includes configs and rules for the following file types:
 
-- `**/*.json`: Config and rules specific to JSON (including formatter rules)
-- `**/*.jsonc`: Config and rules specific to JSONC (including formatter rules)
-- `**/*.json5`: Config and rules specific to JSON5 (including formatter rules)
+- `**/*.json`: Config and rules specific to JSON
+- `**/*.jsonc`: Config and rules specific to JSONC
+- `**/*.json5`: Config and rules specific to JSON5
 
 </details>
 <br />
@@ -189,9 +189,9 @@ Aside from that you can [compose your own configuration](https://typescript-esli
 |`an.configs.ts`|Relevant config and rules for TS files|Prettier|1.0.0|
 |`an.configs.html`| Relevant config and rules for HTML files|Prettier|1.1.0|
 |`an.configs.htmlAngular`|Relevant config and rules for Angular templates|Prettier|1.0.0|
-|`an.configs.json`|Relevant config and rules for JSON files|Prettier|1.2.0|
-|`an.configs.jsonc`|Relevant config and rules for JSONC files|Prettier|1.2.0|
-|`an.configs.json5`|Relevant config and rules for JSON5 filestemplates|Prettier|1.2.0|
+|`an.configs.json`|Relevant config and rules for JSON files|---|1.2.0|
+|`an.configs.jsonc`|Relevant config and rules for JSONC files|---|1.2.0|
+|`an.configs.json5`|Relevant config and rules for JSON5 filestemplates|---|1.2.0|
 |`an.configs.unit`|Relevant config and rules for Jest test files|---|1.0.0|
 |`an.configs.unitTestingLibrary`|Relevant config and rules for test files that use @testing-library/*|---|1.0.0|
 |`an.configs.ui`|Relevant config and rules for Playwright test files|---|1.0.0|

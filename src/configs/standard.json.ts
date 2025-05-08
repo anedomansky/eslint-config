@@ -1,5 +1,4 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
 import { an } from './index.js';
@@ -18,31 +17,6 @@ export const anStandardJSON: TSESLint.FlatConfig.ConfigArray = tseslint.config(
       '**/node_modules/**/*',
       '**/src/gen/**/*',
     ],
-  },
-  {
-    ...prettierRecommended,
-    name: '@anedomansky/eslint-config/prettier/json',
-    files: [
-      '**/*.json',
-      '**/*.jsonc',
-      '.vscode/*.json',
-      '**/*.code-workspace',
-      '**/*.json5',
-    ],
-    ignores: ['package-lock.json'],
-    rules: {
-      'prettier/prettier': [
-        'error',
-        {
-          singleQuote: false,
-          useTabs: false,
-          tabWidth: 2,
-          bracketSpacing: true,
-          endOfLine: 'auto',
-          parser: 'json',
-        },
-      ],
-    },
   },
   ...an.configs.json,
   ...an.configs.jsonc,

@@ -7,7 +7,6 @@ import type { TSESLint } from '@typescript-eslint/utils';
  * The configuration includes:
  * - Base configuration from `baseConfig`.
  * - Custom rules
- * - Prettier integration for code formatting.
  *
  * @returns The HTML ESLint configuration.
  */
