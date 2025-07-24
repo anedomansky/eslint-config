@@ -29,8 +29,5 @@
     },
     "include": [
         "./src/**/*.ts"
-    ],
-    "files": [
-        "./eslint-plugin-import.d.ts"
     ]
 }

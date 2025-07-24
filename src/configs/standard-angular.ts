@@ -4,7 +4,7 @@ import type { TSESLint } from '@typescript-eslint/utils';
 import angular from 'angular-eslint';
 import type { Linter, Rule } from 'eslint';
 import compat from 'eslint-plugin-compat';
-import * as importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
