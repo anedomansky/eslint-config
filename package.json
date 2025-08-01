@@ -34,7 +34,7 @@
     "formatter",
     "code style"
   ],
-  "author": "Alexander Nedomansky <anedomansky@gmail.com>",
+  "author": "anedomansky",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/anedomansky/eslint-config/issues"
