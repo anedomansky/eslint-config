@@ -1,13 +1,13 @@
-import eslint from '@eslint/js';
-import type { TSESLint } from '@typescript-eslint/utils';
 import type { Linter, Rule } from 'eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 import compat from 'eslint-plugin-compat';
-import importPlugin from 'eslint-plugin-import';
+import eslint from '@eslint/js';
+import nodePlugin from 'eslint-plugin-n';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import unusedImports from 'eslint-plugin-unused-imports';
+import regexPlugin from 'eslint-plugin-regexp';
 import tseslint from 'typescript-eslint';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 import { an } from './index.js';
 
@@ -53,22 +53,16 @@ export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   {
     files: ['**/*.ts', '**/*.tsx'],
     plugins: {
-      'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
-    },
-    settings: {
-      'import/resolver': {
-        typescript: true,
-        node: true,
-      },
     },
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.strictTypeChecked,
       ...an.configs.ts,
       compat.configs['flat/recommended'],
-      importPlugin.flatConfigs.recommended,
       prettierRecommended,
+      nodePlugin.configs['flat/recommended-module'],
+      regexPlugin.configs['flat/recommended'],
     ],
   },
 );

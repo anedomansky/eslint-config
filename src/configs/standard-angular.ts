@@ -4,10 +4,9 @@ import type { TSESLint } from '@typescript-eslint/utils';
 import angular from 'angular-eslint';
 import type { Linter, Rule } from 'eslint';
 import compat from 'eslint-plugin-compat';
-import importPlugin from 'eslint-plugin-import';
+import nodePlugin from 'eslint-plugin-n';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unusedImports from 'eslint-plugin-unused-imports';
 import tseslint from 'typescript-eslint';
 
@@ -62,20 +61,14 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
         ...angular.configs.templateAccessibility,
         prettierRecommended,
         ...an.configs.htmlAngular,
+        ...an.configs.html,
       ],
     },
     {
       files: ['**/*.ts', '**/*.tsx'],
       processor: angular.processInlineTemplates,
       plugins: {
-        'simple-import-sort': simpleImportSort,
         'unused-imports': unusedImports,
-      },
-      settings: {
-        'import/resolver': {
-          typescript: true,
-          node: true,
-        },
       },
       extends: [
         eslint.configs.recommended,
@@ -84,8 +77,8 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
         ...ngrx.configs.all,
         ...an.configs.ts,
         compat.configs['flat/recommended'],
-        importPlugin.flatConfigs.recommended,
         prettierRecommended,
+        nodePlugin.configs['flat/recommended-module'],
       ],
     },
   );

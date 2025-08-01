@@ -16,6 +16,9 @@ export default (
     parser,
     sourceType: 'module',
   },
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
   plugins: {
     '@anedomansky/eslint-config': plugin,
   },

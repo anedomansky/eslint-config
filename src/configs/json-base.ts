@@ -14,4 +14,7 @@ export default (
   plugins: {
     '@anedomansky/eslint-config/json': plugin,
   },
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
 });

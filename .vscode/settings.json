@@ -10,7 +10,7 @@
             "fixable": true
         },
         {
-            "rule": "simple-import-sort/*",
+            "rule": "sort-imports",
             "severity": "off",
             "fixable": true
         }

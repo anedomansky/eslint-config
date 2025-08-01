@@ -50,11 +50,20 @@ export default (
       '@typescript-eslint/restrict-plus-operands': 'warn',
       '@typescript-eslint/restrict-template-expressions': 'warn',
       '@typescript-eslint/unbound-method': 'warn',
-      'import/first': 'error',
-      'import/newline-after-import': 'error',
-      'import/no-duplicates': 'error',
+      'array-callback-return': 'error',
+      'dot-notation': 'error',
+      eqeqeq: ['error', 'smart'],
       'lines-between-class-members': ['warn', 'always'],
       'no-console': ['error'],
+      'no-duplicate-imports': 'error',
+      'no-else-return': [
+        'error',
+        {
+          allowElseIf: false,
+        },
+      ],
+      'no-implicit-coercion': 'error',
+      'no-lonely-if': 'error',
       'no-restricted-syntax': [
         'error',
         {
@@ -63,7 +72,13 @@ export default (
             'Do not use enum at all. See: https://www.typescriptlang.org/docs/handbook/enums.html#const-enum-pitfalls',
         },
       ],
+      'no-shadow': 'error',
+      'no-unneeded-ternary': 'error',
+      'object-shorthand': 'error',
+      'prefer-arrow-callback': 'error',
       'prefer-promise-reject-errors': 'off',
+      'prefer-spread': 'error',
+      'prefer-template': 'error',
       'prettier/prettier': [
         'error',
         {
@@ -76,8 +91,7 @@ export default (
         },
       ],
       'require-await': 'off',
-      'simple-import-sort/exports': 'error',
-      'simple-import-sort/imports': 'error',
+      'sort-imports': ['error', { allowSeparatedGroups: true }],
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
