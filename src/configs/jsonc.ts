@@ -1,5 +1,5 @@
-import json from '@eslint/json';
 import type { TSESLint } from '@typescript-eslint/utils';
+import json from '@eslint/json';
 
 /**
  * Generates an ESLint configuration for JSONC files.

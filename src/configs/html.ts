@@ -1,5 +1,5 @@
-import html from '@html-eslint/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
+import html from '@html-eslint/eslint-plugin';
 
 import baseConfig from './template-base.js';
 
