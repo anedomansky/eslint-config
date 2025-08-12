@@ -180,6 +180,27 @@ Includes configs and rules for the following file types:
 - `**/*.json5`: Config and rules specific to JSON5
 
 </details>
+
+<details>
+<summary>Rule customization</summary>
+<br />
+
+Add a `rules` section to your `eslint.config.mjs` file to customize rules:
+
+```js
+{
+  // ... other config
+  rules: {
+    // Disable a rule
+    "no-console": "off",
+    // Enable a rule with a specific severity
+    "no-unused-vars": "warn",
+    // Enable a rule with options and a specific severity
+    "@typescript-eslint/no-explicit-any": ["warn", { "ignoreRestArgs": true }]
+  }
+}
+```
+</details>
 <br />
 
 Aside from that you can [compose your own configuration](https://typescript-eslint.io/getting-started) with the following configurations:
