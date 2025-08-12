@@ -54,7 +54,7 @@ export default (
       'dot-notation': 'error',
       eqeqeq: ['error', 'smart'],
       'lines-between-class-members': ['warn', 'always'],
-      'no-console': ['error'],
+      'no-console': ['error', { allow: ['warn', 'error'] }],
       'no-duplicate-imports': 'error',
       'no-else-return': [
         'error',
@@ -91,7 +91,10 @@ export default (
         },
       ],
       'require-await': 'off',
-      'sort-imports': ['error', { allowSeparatedGroups: true }],
+      'sort-imports': [
+        'error',
+        { allowSeparatedGroups: true, ignoreCase: true },
+      ],
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
