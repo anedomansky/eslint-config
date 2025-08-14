@@ -1,5 +1,4 @@
 import type { Linter, Rule } from 'eslint';
-import type { TSESLint } from '@typescript-eslint/utils';
 import angular from 'angular-eslint';
 import compat from 'eslint-plugin-compat';
 import eslint from '@eslint/js';
@@ -7,6 +6,7 @@ import ngrx from '@ngrx/eslint-plugin/v9';
 import nodePlugin from 'eslint-plugin-n';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import type { TSESLint } from '@typescript-eslint/utils';
 import tseslint from 'typescript-eslint';
 import unusedImports from 'eslint-plugin-unused-imports';
 

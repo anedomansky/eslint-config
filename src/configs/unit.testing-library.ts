@@ -1,5 +1,5 @@
-import type { TSESLint } from '@typescript-eslint/utils';
 import testingLibrary from 'eslint-plugin-testing-library';
+import type { TSESLint } from '@typescript-eslint/utils';
 
 import baseConfig from './template-base.js';
 

@@ -1,5 +1,5 @@
-import type { TSESLint } from '@typescript-eslint/utils';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import type { TSESLint } from '@typescript-eslint/utils';
 import tseslint from 'typescript-eslint';
 
 import { an } from './index.js';
