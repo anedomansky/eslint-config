@@ -1,7 +1,6 @@
 import type { Linter, Rule } from 'eslint';
 import compat from 'eslint-plugin-compat';
 import eslint from '@eslint/js';
-import nodePlugin from 'eslint-plugin-n';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import regexPlugin from 'eslint-plugin-regexp';
@@ -61,7 +60,6 @@ export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
       ...an.configs.ts,
       compat.configs['flat/recommended'],
       prettierRecommended,
-      nodePlugin.configs['flat/recommended-module'],
       regexPlugin.configs['flat/recommended'],
     ],
   },

@@ -3,7 +3,6 @@ import angular from 'angular-eslint';
 import compat from 'eslint-plugin-compat';
 import eslint from '@eslint/js';
 import ngrx from '@ngrx/eslint-plugin/v9';
-import nodePlugin from 'eslint-plugin-n';
 import playwright from 'eslint-plugin-playwright';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import type { TSESLint } from '@typescript-eslint/utils';
@@ -78,7 +77,6 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
         ...an.configs.ts,
         compat.configs['flat/recommended'],
         prettierRecommended,
-        nodePlugin.configs['flat/recommended-module'],
       ],
     },
   );

@@ -95,7 +95,6 @@ export default (
         'error',
         { allowSeparatedGroups: true, ignoreCase: true },
       ],
-      'n/no-missing-import': 'off',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
