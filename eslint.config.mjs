@@ -1,10 +1,11 @@
 // @ts-check
 
 import tseslint from "typescript-eslint";
-import { anStandardTS, anStandardHTML, anStandardJSON } from './dist/index.js';
+import { anStandardAngular, anStandardTS, anStandardHTML, anStandardJSON } from './dist/index.js';
 
 
 export default tseslint.config(
+    ...anStandardAngular,
     ...anStandardTS,
     ...anStandardHTML,
     ...anStandardJSON,

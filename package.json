@@ -17,7 +17,7 @@
     "build": "npm run clean && tsc",
     "clean": "tsc --build --clean",
     "prepublishOnly": "npm run lint && npm run build",
-    "eslint:config": "eslint --print-config ./test/test.json"
+    "eslint:config": "eslint --print-config ./test/test.html"
   },
   "files": [
     "dist"

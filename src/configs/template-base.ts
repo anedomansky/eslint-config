@@ -20,6 +20,6 @@ export default (
     reportUnusedDisableDirectives: 'error',
   },
   plugins: {
-    '@anedomansky/eslint-config/template': plugin,
+    [plugin.meta?.name as string]: plugin,
   },
 });
