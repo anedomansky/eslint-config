@@ -12,7 +12,8 @@ ESLint configuration that helps to write quality code.
 - Sensible defaults
 - Rules are easily customized
 
-> ESLint v9.0.0+ is required.
+> ESLint `v9.0.0+` is required.
+> Since `v1.5.0` this package requires `typescript-eslint` in `^8.39.1` or higher in order to work.
 
 ## Installation
 
