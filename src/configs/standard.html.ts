@@ -1,6 +1,6 @@
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import type { TSESLint } from '@typescript-eslint/utils';
 import tseslint from 'typescript-eslint';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 import { an } from './index.js';
 
@@ -21,6 +21,6 @@ export const anStandardHTML: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   },
   {
     files: ['**/*.html'],
-    extends: [...an.configs.html, prettierRecommended],
+    extends: [...an.configs.html, eslintConfigPrettier],
   },
 );

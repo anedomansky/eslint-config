@@ -1,24 +1,24 @@
 import type { Linter, Rule } from 'eslint';
 import angular from 'angular-eslint';
-import compat from 'eslint-plugin-compat';
 import eslint from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import ngrx from '@ngrx/eslint-plugin/v9';
 import playwright from 'eslint-plugin-playwright';
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import type { TSESLint } from '@typescript-eslint/utils';
 import tseslint from 'typescript-eslint';
 import unusedImports from 'eslint-plugin-unused-imports';
+import regexPlugin from 'eslint-plugin-regexp';
 
 import { an } from './index.js';
 
-type PlaywrightPlugin = {
+interface PlaywrightPlugin {
   configs: {
     'flat/recommended': Linter.Config;
     'playwright-test': Linter.Config;
     recommended: Linter.Config;
   };
   rules: Record<string, Rule.RuleModule>;
-};
+}
 
 const playwrightPlugin: PlaywrightPlugin =
   playwright as unknown as PlaywrightPlugin;
@@ -39,9 +39,6 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
         '**/node_modules/**/*',
         '**/src/gen/**/*',
         '**/.angular/**/*',
-        '**/*.js',
-        '**/*.mjs',
-        '**/*.json',
       ],
     },
     {
@@ -58,13 +55,12 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
       extends: [
         ...angular.configs.templateRecommended,
         ...angular.configs.templateAccessibility,
-        prettierRecommended,
         ...an.configs.htmlAngular,
         ...an.configs.html,
       ],
     },
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['**/*.ts'],
       processor: angular.processInlineTemplates,
       plugins: {
         'unused-imports': unusedImports,
@@ -72,11 +68,13 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
       extends: [
         eslint.configs.recommended,
         ...tseslint.configs.strictTypeChecked,
+        ...tseslint.configs.stylisticTypeChecked,
         ...angular.configs.tsRecommended,
         ...ngrx.configs.all,
         ...an.configs.ts,
-        compat.configs['flat/recommended'],
-        prettierRecommended,
+        ...an.configs.tsAngular,
+        eslintConfigPrettier,
+        regexPlugin.configs['flat/recommended'],
       ],
     },
   );

@@ -20,6 +20,6 @@ export default (
     reportUnusedDisableDirectives: 'error',
   },
   plugins: {
-    [plugin.meta?.name as string]: plugin,
+    [plugin.meta?.name ?? '']: plugin,
   },
 });

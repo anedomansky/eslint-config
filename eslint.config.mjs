@@ -5,7 +5,6 @@ import { anStandardAngular, anStandardTS, anStandardHTML, anStandardJSON } from 
 
 
 export default tseslint.config(
-    ...anStandardAngular,
     ...anStandardTS,
     ...anStandardHTML,
     ...anStandardJSON,

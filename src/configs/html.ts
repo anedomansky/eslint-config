@@ -3,11 +3,11 @@ import type { TSESLint } from '@typescript-eslint/utils';
 
 import baseConfig from './template-base.js';
 
-type HTMLESLint = {
+interface HTMLESLint {
   configs: {
     'flat/recommended': TSESLint.FlatConfig.Config;
   };
-};
+}
 
 const htmlEslint = html as unknown as HTMLESLint;
 
@@ -34,7 +34,10 @@ export default (
     ...htmlEslint.configs['flat/recommended'],
     rules: {
       ...htmlEslint.configs['flat/recommended'].rules,
-      '@html-eslint/attrs-newline': ['error', { ifAttrsMoreThan: 3 }],
+      '@html-eslint/attrs-newline': [
+        'error',
+        { closeStyle: 'sameline', ifAttrsMoreThan: 3 },
+      ],
       '@html-eslint/indent': ['error', 2],
       '@html-eslint/no-abstract-roles': 'error',
       '@html-eslint/no-duplicate-class': 'error',
@@ -56,18 +59,6 @@ export default (
       '@html-eslint/require-meta-charset': 'error',
       '@html-eslint/require-meta-description': 'error',
       '@html-eslint/sort-attrs': 'error',
-      'prettier/prettier': [
-        'error',
-        {
-          singleQuote: false,
-          useTabs: false,
-          tabWidth: 2,
-          semi: true,
-          bracketSpacing: false,
-          endOfLine: 'auto',
-          parser: 'html',
-        },
-      ],
     },
   },
 ];

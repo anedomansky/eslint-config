@@ -1,23 +1,22 @@
 import type { Linter, Rule } from 'eslint';
-import compat from 'eslint-plugin-compat';
 import eslint from '@eslint/js';
 import playwright from 'eslint-plugin-playwright';
-import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import regexPlugin from 'eslint-plugin-regexp';
 import type { TSESLint } from '@typescript-eslint/utils';
 import tseslint from 'typescript-eslint';
 import unusedImports from 'eslint-plugin-unused-imports';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 import { an } from './index.js';
 
-type PlaywrightPlugin = {
+interface PlaywrightPlugin {
   configs: {
     'flat/recommended': Linter.Config;
     'playwright-test': Linter.Config;
     recommended: Linter.Config;
   };
   rules: Record<string, Rule.RuleModule>;
-};
+}
 
 const playwrightPlugin: PlaywrightPlugin =
   playwright as unknown as PlaywrightPlugin;
@@ -36,8 +35,6 @@ export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
       '**/node_modules/**/*',
       '**/src/gen/**/*',
       '**/*.d.ts',
-      '**/*.js',
-      '**/*.mjs',
     ],
   },
   {
@@ -57,9 +54,9 @@ export const anStandardTS: TSESLint.FlatConfig.ConfigArray = tseslint.config(
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.strictTypeChecked,
+      ...tseslint.configs.stylisticTypeChecked,
       ...an.configs.ts,
-      compat.configs['flat/recommended'],
-      prettierRecommended,
+      eslintConfigPrettier,
       regexPlugin.configs['flat/recommended'],
     ],
   },
