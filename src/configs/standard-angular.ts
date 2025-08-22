@@ -56,7 +56,6 @@ export const anStandardAngular: TSESLint.FlatConfig.ConfigArray =
         ...angular.configs.templateRecommended,
         ...angular.configs.templateAccessibility,
         ...an.configs.htmlAngular,
-        ...an.configs.html,
       ],
     },
     {

@@ -213,17 +213,17 @@ In order to do so, you can add a `.prettierrc` file to your project root with th
 
 Aside from that you can [compose your own configuration](https://typescript-eslint.io/getting-started) with the following configurations:
 
-| Name                            | Description                                                           | Since |
-| ------------------------------- | --------------------------------------------------------------------- | ----- |
-| `an.configs.ts`                 | Relevant config and rules for TS files                                | 1.0.0 |
-| `an.configs.html`               | Relevant config and rules for HTML files                              | 1.1.0 |
-| `an.configs.htmlAngular`        | Relevant config and rules for Angular templates                       | 1.0.0 |
-| `an.configs.json`               | Relevant config and rules for JSON files                              | 1.2.0 |
-| `an.configs.jsonc`              | Relevant config and rules for JSONC files                             | 1.2.0 |
-| `an.configs.json5`              | Relevant config and rules for JSON5 files                             | 1.2.0 |
-| `an.configs.unit`               | Relevant config and rules for Jest test files                         | 1.0.0 |
-| `an.configs.unitTestingLibrary` | Relevant config and rules for test files that use @testing-library/\* | 1.0.0 |
-| `an.configs.ui`                 | Relevant config and rules for Playwright test files                   | 1.0.0 |
+| Name                            | Description                                                                                 | Since |
+| ------------------------------- | ------------------------------------------------------------------------------------------- | ----- |
+| `an.configs.ts`                 | Relevant config and rules for TS files                                                      | 1.0.0 |
+| `an.configs.html`               | Relevant config and rules for HTML files. Do not use together with `an.configs.htmlAngular` | 1.1.0 |
+| `an.configs.htmlAngular`        | Relevant config and rules for Angular templates. Do not use together with `an.configs.html` | 1.0.0 |
+| `an.configs.json`               | Relevant config and rules for JSON files                                                    | 1.2.0 |
+| `an.configs.jsonc`              | Relevant config and rules for JSONC files                                                   | 1.2.0 |
+| `an.configs.json5`              | Relevant config and rules for JSON5 files                                                   | 1.2.0 |
+| `an.configs.unit`               | Relevant config and rules for Jest test files                                               | 1.0.0 |
+| `an.configs.unitTestingLibrary` | Relevant config and rules for test files that use @testing-library/\*                       | 1.0.0 |
+| `an.configs.ui`                 | Relevant config and rules for Playwright test files                                         | 1.0.0 |
 
 ## Roadmap
 

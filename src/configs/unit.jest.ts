@@ -23,9 +23,9 @@ export default (
   {
     name: '@anedomansky/eslint-config/unit/jest',
     ignores: ['**/*.e2e.spec.ts', '**/*.e2e.test.ts'],
-    ...jest.configs['flat/recommended'],
+    ...jest.configs['flat/all'],
     rules: {
-      ...jest.configs['flat/recommended'].rules,
+      ...jest.configs['flat/all'].rules,
       'jest/expect-expect': [
         'error',
         {
