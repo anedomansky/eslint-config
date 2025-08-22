@@ -26,24 +26,24 @@ interface ANESLintConfigs {
   htmlAngular: TSESLint.FlatConfig.ConfigArray;
   /**
    * The ESLint configuration for JSON files.
-  */
- json: TSESLint.FlatConfig.ConfigArray;
- /**
-  * The ESLint configuration for JSONC files.
- */
-jsonc: TSESLint.FlatConfig.ConfigArray;
-/**
- * The ESLint configuration for JSON5 files.
-*/
-json5: TSESLint.FlatConfig.ConfigArray;
-/**
- * The ESLint configuration for TS files.
-*/
-ts: TSESLint.FlatConfig.ConfigArray;
-/**
- * The ESLint configuration for Angular-TS files.
- */
-tsAngular: TSESLint.FlatConfig.ConfigArray;
+   */
+  json: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for JSONC files.
+   */
+  jsonc: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for JSON5 files.
+   */
+  json5: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for TS files.
+   */
+  ts: TSESLint.FlatConfig.ConfigArray;
+  /**
+   * The ESLint configuration for Angular-TS files.
+   */
+  tsAngular: TSESLint.FlatConfig.ConfigArray;
   /**
    * The ESLint configuration for UI tests.
    */
@@ -57,7 +57,6 @@ tsAngular: TSESLint.FlatConfig.ConfigArray;
    */
   unitJest: TSESLint.FlatConfig.ConfigArray;
 }
-
 
 export interface ANESLintConfig {
   configs: ANESLintConfigs;

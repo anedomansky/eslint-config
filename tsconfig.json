@@ -1,33 +1,29 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "noImplicitOverride": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "skipDefaultLibCheck": true,
-        "skipLibCheck": true,
-        "declaration": true,
-        "moduleResolution": "NodeNext",
-        "isolatedModules": true,
-        "verbatimModuleSyntax": true,
-        "isolatedDeclarations": true,
-        "module": "NodeNext",
-        "incremental": true,
-        "composite": true,
-        "target": "ESNext",
-        "rootDir": "./src",
-        "lib": [
-            "ES2024"
-        ]
-    },
-    "include": [
-        "./src/**/*.ts"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "moduleResolution": "NodeNext",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "isolatedDeclarations": true,
+    "module": "NodeNext",
+    "incremental": true,
+    "composite": true,
+    "target": "ESNext",
+    "rootDir": "./src",
+    "lib": ["ES2024"]
+  },
+  "include": ["./src/**/*.ts"]
 }
