@@ -1,6 +1,6 @@
 {
   "name": "@anedomansky/eslint-config",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Opinionated ESLint configuration for quality code",
   "exports": {
     ".": {
