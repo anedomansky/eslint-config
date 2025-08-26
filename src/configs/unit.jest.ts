@@ -38,6 +38,10 @@ export default (
         },
       ],
       'jest/prefer-importing-jest-globals': ['error', { types: ['jest'] }],
+      'jest/prefer-lowercase-title': [
+        'error',
+        { ignoreTopLevelDescribe: true },
+      ],
     },
   },
 ];
