@@ -37,6 +37,7 @@ export default (
           ],
         },
       ],
+      'jest/prefer-expect-assertions': 'off',
       'jest/prefer-importing-jest-globals': ['error', { types: ['jest'] }],
       'jest/prefer-lowercase-title': [
         'error',
